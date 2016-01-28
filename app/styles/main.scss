@@ -1,0 +1,283 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+body {
+  background: none;
+  color: #fff;
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: 'Tangerine', serif;
+  font-weight: 400;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: 'Sorts Mill Goudy' serif;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+/** BASE *******************************************/
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  min-height: 100vh;
+  min-width: 100vw;
+
+  z-index: -1000;
+
+  img {
+    height: 100vh;
+    width: auto;
+    min-width: 100%;
+  }
+}
+
+.box {
+  background-color: rgba(black, 0.7);
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 50px 30px 85px;
+
+  &:nth-of-type(even) {
+    background: none;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: -50px;
+
+    .btn {
+      color: #000;
+      border-color: #000;
+
+      &:hover {
+        border-color: black;
+        color: black;
+        background-color: rgba(black, 0.1);
+      }
+    }
+
+
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    padding: 50px 30px 40px;
+  }
+}
+
+.box-title {
+  text-align: center;
+  font-size: 5em;
+}
+
+.box-img {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    width: 100%;
+    max-width: 450px;
+    border: 17px solid #fff;
+    box-shadow: 5px 5px 30px rgba(#000, 0.7);
+    transform: rotate(-5deg);
+  }
+}
+
+.box-text {
+  margin: 30px auto 0;
+  text-align: center;
+  max-width: 500px;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px 15px 8px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #FFF;
+  border: 1px solid #FFF;
+  cursor: pointer;
+
+  &:hover {
+    border-color: white;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(white, 0.1);
+  }
+
+  &:active {
+    border-color: green;
+  }
+
+  &:visited {
+    color: green;
+  }
+}
+
+/** NAVIGATION *************************************/
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.nav-title {
+  font-family: 'Sorts Mill Goudy';
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+/** HOME *************************************/
+
+#hem {
+  padding-top: 50px;
+  height: 100vh;
+}
+
+.text-top {
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.text-top-name {
+  line-height: 0.5em;
+  font-size: 6em;
+  margin-right: 65px;
+}
+
+.text-top-name-mirjam {
+  margin-left: 70px;
+}
+
+.text-top-sub {
+  margin-top: 40px;
+}
+
+.arrow-down {
+  display: block;
+  text-align: center;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -25px;
+  margin-bottom: 30px;
+
+  img {
+    width: 35px;
+  }
+}
+
+/** ANMALAN *************************************/
+
+.anmalan-form {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 400px;
+}
+
+.made-by {
+  text-align: center;
+  margin: 150px 0 50px;
+  font-size: 1.1em;
+  color: #222;
+}
+
+
+@media screen and (min-width: 800px) {
+
+  #hem {
+    @extend clearfix;
+  }
+
+  .box-left {
+    width: 60%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 10%;
+  }
+
+  .box-right {
+    width: 40%;
+    height: 100%;
+    float: right;
+    text-align: left;
+    padding-top: 200px;
+    padding-left: 5%;
+  }
+
+  .box-img {
+
+    img {
+      width: 500px;
+    }
+  }
+
+  .text-top-name-mirjam {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .text-top-name {
+    margin-top: 0;
+    line-height: 0.7em;
+    font-size: 9em;
+  }
+
+  .box-right {
+    padding-left: 0;
+  }
+}
